@@ -4,10 +4,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from './routes'
 import { store } from "./store"
 import App from './App.vue'
-import VueSweetalert2 from 'vue-sweetalert2';
-
-import 'sweetalert2/dist/sweetalert2.min.css';
-
 
 import './assets/main.css'
 
@@ -21,7 +17,6 @@ const router = createRouter({
 
 const app = createApp(App)
 
-app.use(VueSweetalert2)
 app.use(router)
 app.use(store)
 app.mount('#app')
