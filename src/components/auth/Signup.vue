@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid py-5" style="background-color: #f5f5f5">
-    <div style="background-color: #ffffff" class="p-5 w-50 m-auto">
+    <div style="background-color: #ffffff" class="p-5 m-auto signup-form">
       <div class="text-center">
         <img src="../../assets/images/Vector.png" alt="Logo" />
         <h2 class="mt-4">Create your account</h2>
@@ -76,11 +76,7 @@
             @keyInput="passwordCheck"
           >
           </base-input-vue>
-          <p
-            class="text-danger mt-1 fw-medium"
-            style="font-size: 11px"
-            :style="{ display: paswwordStatusDisplay }"
-          >
+          <p class="text-danger mt-1 fw-medium" style="font-size: 11px" :style="{ display: paswwordStatusDisplay }">
             The password field must be at least 8 characters
           </p>
         </div>
@@ -98,54 +94,33 @@
             placeholder="Same with password"
           >
           </base-input-vue>
-          <p
-            class="text-danger mt-1 fw-medium"
-            style="font-size: 11px"
-            :style="{ display: confirmPasswordDoesNotMacth }"
-          >
+          <p class="text-danger mt-1 fw-medium" style="font-size: 11px" :style="{ display: confirmPasswordDoesNotMacth }">
             The password confirmation does not match
           </p>
-          <p
-            class="text-success mt-1 fw-medium"
-            style="font-size: 11px"
-            :style="{ display: confirmPasswordMacth }"
-          >
+          <p class="text-success mt-1 fw-medium" style="font-size: 11px" :style="{ display: confirmPasswordMacth }">
             The password confirmation does match
           </p>
         </div>
 
         <!-- Profile Photo -->
-          <div class="my-4">
-          <label for="recipe-image">
+        <div class="my-4">
+          <label for="recipe-image" class="fw-semibold">
             Profile Photo<span style="color: #cb3a31">*</span>
-            <div class="d-flex">
-              <div
-                class="border px-5 py-4 text-center mt-2 rounded-3 me-2"
-                style="height: 140px"
-              >
-                <div class="my-2">
-                  <i
-                    class="fa-solid fa-plus d-block rounded-circle px-3 py-3"
-                    style="background-color: #efefff; color: #4c4ddc"
-                  ></i>
-                  Upload
-                </div>
-              </div>
-
-              <div
-                class="border px-5 py-4 text-center mt-2 rounded-3 ms-2"
-                :class="{
-                  'd-none': !signupData.imageLink,
-                  'd-block': signupData.imageLink,
-                }"
-              >
+            <div>
+              <div class="border p-1 mt-2 rounded-circle">
                 <img
                   :src="signupData.imageLink"
-                  class="card-img-top object-fit-cover"
-                  height="200"
-                  width="245"
+                  class="rounded-circle"
+                  width="140"
+                  height="150"
+                  style="object-fit: cover"
                 />
               </div>
+              <div class="text-center" style="transform: translateY(-24px)">
+                  <i
+                    class="fa-solid fa-camera fs-5 p-2 rounded-circle bg-white"
+                  ></i>
+                </div>
             </div>
           </label>
           <base-input-vue
@@ -195,7 +170,7 @@ export default {
       password: "",
       confirmationPassword: "",
       isLogin: false,
-      imageLink: ""
+      imageLink: "",
     });
 
     const showConfirmPasswordDoesNotMatch = () => {
@@ -267,7 +242,7 @@ export default {
       signupData,
       passwordCheck,
       register,
-      checkImage
+      checkImage,
     };
   },
 };

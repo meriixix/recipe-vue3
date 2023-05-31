@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import { inject } from "vue"
 import { useStore } from 'vuex';
 export default {
     setup() {

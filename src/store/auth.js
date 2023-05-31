@@ -92,8 +92,6 @@ export default {
             commit("setUserLogin", data[key]);
             commit("setLoginStatus", true);
             Cookies.set("UID", data[key].userId)
-            // Cookies.set("user", JSON.stringify(data[key]));
-            return;
           }
         }
       } catch (err) {

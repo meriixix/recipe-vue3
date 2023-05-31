@@ -6,7 +6,6 @@
         <div class="row my-4">
           <div class="col-12 col-sm-2"></div>
           <!-- <recipe-detail :recipe="detailData"></recipe-detail> -->
-          
             <recipe-detail-vue v-if="detailData"></recipe-detail-vue>
             <base-shimmer v-else></base-shimmer>
           

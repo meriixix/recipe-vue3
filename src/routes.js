@@ -6,6 +6,7 @@ import UserPage from "./components/pages/UserPage.vue";
 import NewRecipePage from "./components/pages/NewRecipePage.vue";
 import EditRecipePage from "./components/pages/EditRecipePage.vue";
 import SearchPage from "./components/pages/SearchPage.vue"
+import ErrorPage from "./components/pages/ErrorPage.vue"
 
 import Cookies from "js-cookie";
 import { store } from "./store/index";
@@ -87,6 +88,7 @@ export const routes = [
   },
   // { path: "/search", name: "search", component: SearchPage },
   { path: "/search", name: "search", component: SearchPage },
-  { path: "/signup", name: "signup", component: SignupPage },
-  { path: "/login", name: "login", component: LoginPage },
+  { path: "/signup", name: "signup", component: SignupPage, beforeEnter: (to,from, next) => checkAuth() ? next({ name: "homePage" }) : next() },
+  { path: "/login", name: "login", component: LoginPage, beforeEnter: (to,from, next) => checkAuth() ? next({ name: "homePage" }) : next() },
+  { path: '/:pathMatch(.*)*', name: "NotFound", component: ErrorPage },  
 ];

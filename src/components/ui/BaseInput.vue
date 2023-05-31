@@ -11,7 +11,6 @@
       @keyup="$emit('keyInput', $event.target.value)"
       @change="$emit('fileInput', $event.target.files)"
       :readonly="readonly === '1'"
-      required
     />
   </div>
 </template>
@@ -37,14 +36,6 @@ export default {
     readonly: {
       type: String,
       default: "0",
-    },
-    validFeedback: {
-      type: String,
-      require: true,
-    },
-    inValidFeedback: {
-      type: String,
-      require: true,
     },
     modelValue: ''
   },

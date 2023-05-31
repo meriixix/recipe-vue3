@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css"
-import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { createApp } from 'vue'
 import { routes } from './routes'
 import { store } from "./store"
 import App from './App.vue'

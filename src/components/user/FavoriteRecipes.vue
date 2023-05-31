@@ -35,9 +35,6 @@ import Swal from "sweetalert2";
 
 export default {
   setup() {
-    const modalBody = ref("");
-    const recipeId = ref("");
-
     const store = useStore();
 
     const likeRecipe = (id) => {

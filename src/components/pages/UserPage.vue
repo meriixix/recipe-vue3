@@ -24,6 +24,7 @@ import { useRoute } from "vue-router";
 import { computed } from "vue";
 import Header from "../header/Header.vue";
 import Footer from "../footer/Footer.vue";
+import { useStore } from 'vuex';
 
 export default {
   components: {
@@ -36,13 +37,12 @@ export default {
   },
   setup() {
     const route = useRoute();
-
+    const store = useStore();
+    
+    store.dispatch("recipe/recipeList")
     const getRoute = computed(() => {
       return route.params.component;
     });
-
-    console.log("Route");
-    console.log(getRoute.value);
 
     return {
       getRoute,

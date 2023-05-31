@@ -113,7 +113,7 @@ export default {
         const { data } = await axios.delete(
           `https://recipe-vue-batch2-default-rtdb.firebaseio.com/recipes/${payload}.json?auth=${rootState.auth.token}`
         );
-        commit("deleteRecipe", payload);
+        // commit("deleteRecipe", payload);
       } catch (err) {
         console.log(err);
       }
@@ -125,7 +125,7 @@ export default {
           `https://recipe-vue-batch2-default-rtdb.firebaseio.com/recipes/${payload.id}.json?auth=${rootState.auth.token}`,
           newRecipe
         );
-        commit("updateRecipe", payload);
+        // commit("updateRecipe", payload);
       } catch (err) {}
     },
   },

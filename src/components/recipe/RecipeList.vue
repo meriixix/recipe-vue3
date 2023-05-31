@@ -6,9 +6,9 @@
       :recipe="recipe"
       
     ></recipe-card-vue>
-    <div>
+    <!-- <div>
       <base-card-shimmer v-show="recipeList.length === 0"></base-card-shimmer>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
       } else {
         return store.state.recipe.recipes
       }
+      
     })
 
     return {

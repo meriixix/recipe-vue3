@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -88,13 +88,13 @@ body {
   width: 170px;
   height: 40px;
   --bs-btn-font-weight: 400;
-  --bs-btn-color: #CB3A31;
+  --bs-btn-color: #cb3a31;
   --bs-btn-bg: var(--bs-white);
-  --bs-btn-border-color: #CB3A31;
+  --bs-btn-border-color: #cb3a31;
   --bs-btn-border-radius: 0.5rem;
   --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #CB3A31;
-  --bs-btn-hover-border-color: #CB3A31;
+  --bs-btn-hover-bg: #cb3a31;
+  --bs-btn-hover-border-color: #cb3a31;
   --bs-btn-focus-shadow-rgb: var(--base-color);
   --bs-btn-active-color: var(--bs-white);
   --bs-btn-active-bg: var(--base-color);
@@ -116,7 +116,8 @@ body {
   --bs-btn-active-border-color: var(--base-color);
 }
 
-.btn.submit-recipe-btn, .btn.login {
+.btn.submit-recipe-btn,
+.btn.login {
   --bs-btn-font-weight: 400;
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--base-color);
@@ -145,7 +146,6 @@ body {
   --bs-btn-active-bg: var(--base-white);
   --bs-btn-active-border-color: var(--base-white);
 }
-
 
 .btn.new-ingredient-btn {
   --bs-btn-font-weight: 400;
@@ -197,41 +197,58 @@ body {
 }
 
 .bg-color-detail {
-  background-color: #EFEFFF;
+  background-color: #efefff;
 }
 
 .border-primary {
-  border-color: #4C4DDC !important;
+  border-color: #4c4ddc !important;
 }
 
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
+  /* styles for browsers larger than 960px; */
   .recipe__detail-img {
     width: 200px;
     height: 200px;
   }
 }
-/* 
-@media screen and (min-width: 768px) {
-  .btn.delete-btn {
-    width: 120px
-  }
 
-  .btn.edit-btn {
-    width: 120px
-  }
-} */
+@media only screen and (min-width: 768px) {
+  /* default iPad screens */
+  
+}
 
-@media screen and (max-width: 576px) {
+@media only screen and (min-width: 1200px) {
+  /* for sumo sized (mac) screens */
+}
+
+@media only screen and (min-width: 1400px) {
+  /* styles for browsers larger than 1440px; */
+  
+}
+
+@media only screen and (min-width: 576px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
   .recipe__detail-img {
     width: 311px;
     height: 311px;
   }
 
   .btn.delete-btn {
-    width: 140px
+    width: 140px;
   }
 
   .btn.edit-btn {
-    width: 140px
+    width: 140px;
+  }
+
+  .login-form, .signup-form {
+    width: 600px;
+  }
+  
+}
+
+@media only screen and (max-width: 576px) {
+  .login-form, .signup-form {
+    width: 100%;
   }
 }
